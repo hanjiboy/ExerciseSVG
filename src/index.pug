@@ -1,0 +1,68 @@
+doctype html(lang='en')
+head
+  meta(charset='UTF-8') 
+  title ExerciseSVG   
+  link(rel='stylesheet', href='./style.css')
+body
+// partial:index.partial.html
+svg#pic1(viewbox="-50 -50 100 100")
+  line(x1=-20 y1=0 x2=20 y2=0)
+  line(x1=0 y1=-20 x2=0 y2=20)
+  circle(cx=0 cy=0 r=10)
+    animate(attributeName="r" dur="2s" values="10;30;10" repeatCount="indefinite")
+  
+svg#pic2(viewbox="-50 -50 100 100")
+  circle(cx=0 cy=0 r=10)
+  g
+    line(x1=-20 y1=0 x2=20 y2=0)
+    line(x1=0 y1=-20 x2=0 y2=20)
+    rect(x=-20 y=-20 width=40 height=40)
+    animateTransform(attributeName="transform" type="rotate" dur="2s" values="0;360" repeatCount="indefinite")
+  
+svg#pic3(viewbox="0 0 200 200")
+  circle(cx=0 cy=100 r=3)
+    animate(attributeName="cy" dur="2s" values="100;110;100" repeatCount="indefinite")
+  circle(cx=30 cy=50 r=3)
+    animate(attributeName="cy" dur="2s" values="50;40;50" repeatCount="indefinite")
+  circle(cx=60 cy=150 r=3)
+    animate(attributeName="cy" dur="2s" values="150;160;150" repeatCount="indefinite")
+  circle(cx=90 cy=50 r=3)
+    animate(attributeName="cy" dur="2s" values="50;30;50" repeatCount="indefinite")
+  circle(cx=120 cy=150 r=3)
+    animate(attributeName="cy" dur="2s" values="150;170;150" repeatCount="indefinite")
+  circle(cx=150 cy=50 r=3)
+    animate(attributeName="cy" dur="2s" values="50;20;50" repeatCount="indefinite")
+  circle(cx=170 cy=140 r=3)
+    animate(attributeName="cy" dur="2s" values="140;180;140" repeatCount="indefinite")
+  circle(cx=200 cy=100 r=3)
+    animate(attributeName="cy" dur="2s" values="100;90;100" repeatCount="indefinite")
+  polyline(points="0,100 30,50 60,150 90,50 120,150 150,50 170,140 200,100")
+    animate(attributeName="points" dur="2s" values="0,100 30,50 60,150 90,50 120,150 150,50 170,140 200,100;0,110 30,40 60,160 90,30 120,170 150,20 170,180 200,90;0,100 30,50 60,150 90,50 120,150 150,50 170,140 200,100" repeatCount="indefinite")
+  
+svg#pic4(viewbox="0 0 200 200")
+  rect(x=0 y=0 width=20 height=100)
+    animate(attributeName="height" begin="0s" dur="2s" values="100;200;100" repeatCount="indefinite")
+  rect(x=30 y=0 width=20 height=80)
+    animate(attributeName="height" begin="-0.3s" dur="2s" values="80;200;80" repeatCount="indefinite")
+  rect(x=60 y=0 width=20 height=120)
+    animate(attributeName="height" begin="-0.6s" dur="2s" values="120;200;120" repeatCount="indefinite")
+  rect(x=90 y=0 width=20 height=150)
+    animate(attributeName="height" begin="-0.9s" dur="2s" values="150;200;150" repeatCount="indefinite")
+  rect(x=120 y=0 width=20 height=90)
+    animate(attributeName="height" begin="-1.2s" dur="2s" values="90;200;90" repeatCount="indefinite")
+  rect(x=150 y=0 width=20 height=50)
+    animate(attributeName="height" begin="-1.5s" dur="2s" values="50;200;50" repeatCount="indefinite")
+  rect(x=180 y=0 width=20 height=10)
+    animate(attributeName="height" begin="-1.8s" dur="2s" values="10;200;10" repeatCount="indefinite")
+  
+svg#pic5(viewbox="-50 -40 100 100")
+  rect.big_outer(x=-30 y=-20 width=60 height=40)
+  rect.small_inner(x=-25 y=-15 width=50 height=30)
+  rect.neck(x=-2 y=20 width=4 height=10)
+  rect.bottom(x=-9 y=30 width=18 height=4)
+  g.screen_content
+    line(x1=-20 y1=0 x2=-8 y2=0)
+    line(x1=-20 y1=5 x2=-5 y2=5)
+    circle(cx=10 cy=2 r=7)
+  text.text_content(x=-35 y=50) my computer
+// partial
