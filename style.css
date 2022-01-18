@@ -1,0 +1,87 @@
+@charset "UTF-8";
+html,body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 240px;
+  border: solid 2px;
+  margin: 5px;
+}
+
+#pic1 {
+  stroke: black;
+  stroke-width: 3px;
+}
+#pic1 circle {
+  fill: white;
+}
+
+#pic2 {
+  stroke: black;
+  stroke-width: 3px;
+}
+#pic2 circle {
+  fill: white;
+}
+#pic2 rect {
+  fill: none;
+}
+
+#pic3 {
+  stroke: black;
+  stroke-width: 2px;
+}
+#pic3 polyline {
+  fill: none;
+}
+
+#pic5 {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+#pic5 circle {
+  stroke: none;
+  fill: red;
+}
+#pic5 text {
+  fill: black;
+  stroke: none;
+  font-family: 微軟正黑體;
+  font-size: 12px;
+}
+#pic5 .big_outer, #pic5 .small_inner, #pic5 .neck, #pic5 .bottom {
+  transform: scale(0);
+  transform-origin: center bottom;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+#pic5 .screen_content {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+#pic5 .text_content {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+#pic5:hover .big_outer, #pic5:hover .small_inner, #pic5:hover .neck, #pic5:hover .bottom, #pic5:hover .text_content {
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+#pic5:hover .neck, #pic5:hover .bottom {
+  transition-delay: 0s;
+}
+#pic5:hover .screen_content {
+  opacity: 1;
+  transition-delay: 1s;
+}
+#pic5:hover .text_content {
+  opacity: 1;
+  transition-delay: 1.5s;
+}
